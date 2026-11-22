@@ -40,4 +40,14 @@ public class JobRepo {
     public List<JobPost> getAllJobs(){
         return jobs;
     }
+
+    public JobPost getJob(int i) {
+
+        for(JobPost job : jobs){
+            if(job.getPostId()==i){
+                return job;
+            }
+        }
+        return null;
+    }
 }
