@@ -41,4 +41,10 @@ public class JobController {
         service.updateJob(jobPost);
         return service.getJob(jobPost.getPostId());
     }
+
+    @GetMapping("load")
+    public String loadData(){
+        service.load();
+        return "sucess";
+    }
 }
